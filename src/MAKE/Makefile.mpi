@@ -34,7 +34,7 @@ SHLIBFLAGS =	-shared
 # LAMMPS ifdef settings, OPTIONAL
 # see possible settings in doc/Section_start.html#2_2 (step 4)
 
-LMP_INC =	-DLAMMPS_GZIP -DLAMMPS_VTK
+LMP_INC =	-DLAMMPS_GZIP #-DLAMMPS_VTK
 
 # MPI library, REQUIRED
 # see discussion in doc/Section_start.html#2_2 (step 5)
@@ -43,9 +43,9 @@ LMP_INC =	-DLAMMPS_GZIP -DLAMMPS_VTK
 # PATH = path for MPI library
 # LIB = name of MPI library
 
-MPI_INC =
-MPI_PATH =
-MPI_LIB =
+MPI_INC = -I/Users/schus/lib/miniconda3/envs/moose/include
+MPI_PATH = -L/Users/schus/lib/miniconda3/envs/moose/lib
+MPI_LIB = #-I/Users/schus/lib/miniconda3/envs/moose/lib/libmpi.dylib
 
 # FFT library, OPTIONAL
 # see discussion in doc/Section_start.html#2_2 (step 6)
@@ -74,9 +74,9 @@ JPG_LIB =
 # PATH = path for VTK library
 # LIB = name of VTK library
 
-VTK_INC =	-I/usr/include/vtk-6.2
-VTK_PATH =	#-L/usr/lib/x86_64-linux-gnu
-VTK_LIB =	-lvtkCommonCore-6.2 -lvtkIOCore-6.2 -lvtkIOXML-6.2 -lvtkIOLegacy-6.2 -lvtkCommonDataModel-6.2 -lvtkIOParallel-6.2 -lvtkParallelCore-6.2 -lvtkParallelMPI-6.2 -lvtkIOImage-6.2 -lvtkCommonExecutionModel-6.2 -lvtkFiltersCore-6.2 -lvtkIOParallelXML-6.2
+VTK_INC = #-I/Users/schus/lib/miniconda3/envs/moose/libmesh-vtk/include/vtk-6.3
+VTK_PATH = #-L/Users/schus/lib/miniconda3/envs/moose/lib
+VTK_LIB =	#-lvtkCommonCore-6.2 -lvtkIOCore-6.2 -lvtkIOXML-6.2 -lvtkIOLegacy-6.2 -lvtkCommonDataModel-6.2 -lvtkIOParallel-6.2 -lvtkParallelCore-6.2 -lvtkParallelMPI-6.2 -lvtkIOImage-6.2 -lvtkCommonExecutionModel-6.2 -lvtkFiltersCore-6.2 -lvtkIOParallelXML-6.2
 
 # ---------------------------------------------------------------------
 # build rules and dependencies
